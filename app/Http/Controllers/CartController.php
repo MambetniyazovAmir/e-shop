@@ -26,7 +26,7 @@ class CartController extends Controller
 
     public function delete(Request $request)
     {
-        $product = Product::findOrFail($request->product_id);
-        Cart::remove($product);
+        Cart::remove($request->cart_id);
+        return Cart::content();
     }
 }
