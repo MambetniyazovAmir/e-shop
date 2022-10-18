@@ -21,7 +21,7 @@ return new class extends Migration
             $table->foreignIdFor(Category::class);
             $table->text('slug');
             $table->integer('price');
-            $table->json('property');
+            $table->json('property')->nullable();
             $table->timestamps();
         });
     }
